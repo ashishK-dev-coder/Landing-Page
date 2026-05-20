@@ -24,3 +24,54 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+main[data-shade="dark"] > section {
+  background: linear-gradient(135deg, #0f172a 0%, #111827 52%, #1e293b 100%) !important;
+  color: #f8fafc;
+}
+
+main[data-shade="dark"] > section:nth-of-type(even) {
+  background: linear-gradient(135deg, #020617 0%, #0f172a 55%, #172554 100%) !important;
+}
+
+main[data-shade="dark"] footer {
+  background: #020617 !important;
+}
+
+main[data-shade="dark"] section [class*="bg-white"],
+main[data-shade="dark"] section [class*="bg-slate-50"],
+main[data-shade="dark"] section [class*="bg-slate-100"],
+main[data-shade="dark"] section [class*="bg-slate-950"] {
+  background-color: rgba(15, 23, 42, 0.86) !important;
+}
+
+main[data-shade="dark"] section [class*="border-slate"],
+main[data-shade="dark"] section [class*="border-white"] {
+  border-color: rgba(148, 163, 184, 0.28) !important;
+}
+
+main[data-shade="dark"] section [class*="text-slate-950"],
+main[data-shade="dark"] section [class*="text-slate-900"] {
+  color: #f8fafc !important;
+}
+
+main[data-shade="dark"] section [class*="text-slate-800"],
+main[data-shade="dark"] section [class*="text-slate-700"] {
+  color: #e2e8f0 !important;
+}
+
+main[data-shade="dark"] section [class*="text-slate-600"],
+main[data-shade="dark"] section [class*="text-slate-500"],
+main[data-shade="dark"] section [class*="text-slate-400"] {
+  color: #cbd5e1 !important;
+}
