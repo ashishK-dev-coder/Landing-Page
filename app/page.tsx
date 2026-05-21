@@ -12,7 +12,6 @@ import {
   Calendar,
   CheckCircle2,
   ChevronDown,
-  CirclePlay,
   Clock,
   GraduationCap,
   HeartPulse,
@@ -212,6 +211,37 @@ const testimonials = [
     role: "HR Director",
     quote:
       "A toolkit for stress and team wellbeing. Absolutely worth every rupee.",
+  },
+];
+
+const videoTestimonials = [
+  {
+    id: "shaktipat-magnetism-hypnotism-1",
+    title: "प्राचीन शक्तिपात, मैग्नेटिज्म और हिप्नोटिज्म का अद्भुत संगम",
+    embedUrl: "https://www.youtube.com/embed/XlucfW18d80",
+    description:
+      "इस लाइव Demonstration में प्राचीन शक्तिपात ऊर्जा, मैग्नेटिज्म और आधुनिक Hypnotism Techniques का अनोखा अनुभव देखने को मिलता है। सिर्फ हाथों की ऊर्जा, दिशा और हल्के स्पर्श के माध्यम से व्यक्ति धीरे-धीरे गहरी ट्रांस और रिलैक्स अवस्था में पहुंच जाता है। यह Powerful प्रक्रिया लोगों को किसी अदृश्य ऊर्जा और मानसिक आकर्षण का अनुभव कराती है। बाद में सकारात्मक सुझावों द्वारा आत्मविश्वास, करियर ग्रोथ और जीवन में सफलता के लिए Mind Programming की जाती है।",
+  },
+  {
+    id: "deep-hypnotic-experience",
+    title: "सिर्फ कुछ सेकंड में गहरा हिप्नोटिक अनुभव",
+    embedUrl: "https://www.youtube.com/embed/CYRPb6O0wqM",
+    description:
+      "इस गहरे सम्मोहन अनुभव में व्यक्ति तुरंत रिलैक्स अवस्था में पहुंचकर भीतर से शांति और सुकून महसूस करता है। इसके बाद मन को अच्छे स्वास्थ्य, मानसिक शांति, तनाव मुक्ति और जीवन में सफलता के लिए Positive Programming दी जाती है। यह Powerful प्रक्रिया अंदरूनी बदलाव और बेहतर जीवन की दिशा में कार्य करती है।",
+  },
+  {
+    id: "handshake-hypnosis",
+    title: "पलक झपकते ही हस्त स्पर्श से गहरे सम्मोहन का अनुभव",
+    embedUrl: "https://www.youtube.com/embed/olj5yHMtNjs",
+    description:
+      "इस लाइव Handshake Hypnosis Demonstration में कई लोगों को सिर्फ एक स्पर्श के माध्यम से गहरी ट्रांस अवस्था में ले जाया गया है। इसके बाद सभी प्रतिभागियों को सफलता, मानसिक शांति, तनाव मुक्ति और Positive Life Transformation के लिए Powerful Group Therapy दी गई। यह अनुभव मन की अद्भुत शक्ति और सम्मोहन के गहरे प्रभाव को दर्शाता है। जिसे देखकर आप भी इस अनोखे अनुभव को स्वयं महसूस करना चाहेंगे।",
+  },
+  {
+    id: "shaktipat-magnetism-hypnotism-2",
+    title: "प्राचीन शक्तिपात, मैग्नेटिज्म और हिप्नोटिज्म का अद्भुत संगम",
+    embedUrl: "https://www.youtube.com/embed/EpgWe5gcveI",
+    description:
+      "इस लाइव Demonstration में प्राचीन शक्तिपात ऊर्जा, मैग्नेटिज्म और आधुनिक Hypnotism Techniques का अनोखा अनुभव देखने को मिलता है। सिर्फ हाथों की ऊर्जा, दिशा और हल्के स्पर्श के माध्यम से व्यक्ति धीरे-धीरे गहरी ट्रांस और रिलैक्स अवस्था में पहुंच जाता है। यह Powerful प्रक्रिया लोगों को किसी अदृश्य ऊर्जा और मानसिक आकर्षण का अनुभव कराती है। बाद में सकारात्मक सुझावों द्वारा आत्मविश्वास, करियर ग्रोथ और जीवन में सफलता के लिए Mind Programming की जाती है।",
   },
 ];
 
@@ -453,13 +483,14 @@ export default function LandingPage() {
           </p>
 
           <div className="mx-auto mt-12 aspect-video max-w-4xl overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-950 shadow-2xl shadow-slate-900/20">
-            <div className="flex h-full flex-col items-center justify-center bg-[radial-gradient(circle_at_center,_rgba(245,158,11,0.25),_transparent_34rem)] px-6 text-white">
-              <CirclePlay className="mb-5 h-20 w-20 text-amber-400" />
-              <p className="text-lg font-bold">Workshop preview video</p>
-              <p className="mt-2 text-sm text-slate-300">
-                Replace this placeholder with your YouTube or Vimeo embed.
-              </p>
-            </div>
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="h-full w-full"
+              referrerPolicy="strict-origin-when-cross-origin"
+              src="https://www.youtube.com/embed/fyoZPv8xpCo?start=56"
+              title="Workshop preview video"
+            />
           </div>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -515,30 +546,57 @@ export default function LandingPage() {
       </section>
 
       <section
-        className="bg-slate-50 px-4 py-24"
+        className="bg-slate-50 px-6 py-24 sm:px-8 lg:px-12"
         id="video-testimonials"
       >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-12 max-w-4xl text-center">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-amber-600">
-              Target audience & testimonials
+              Testimonial video
             </p>
             <h2 className="text-4xl font-black tracking-tight text-slate-950 sm:text-5xl">
-              Real People. Real Transformations. These People Were Exactly
-              Where You Are Now.
+              Real demonstrations, real experiences
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 6 }).map((_, index) => (
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {videoTestimonials.map((testimonial) => (
               <div
-                className="aspect-video rounded-3xl border border-slate-200 bg-white p-4 shadow-sm"
-                key={index}
+                className="flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10"
+                key={testimonial.id}
               >
-                <div className="flex h-full flex-col items-center justify-center rounded-2xl bg-slate-100 text-slate-500">
-                  <CirclePlay className="mb-3 h-12 w-12 text-amber-500" />
-                  <p className="font-bold">Video Testimonial {index + 1}</p>
-                  <p className="text-sm">YouTube embed placeholder</p>
+                <div className="aspect-video overflow-hidden rounded-2xl bg-slate-950">
+                  {testimonial.embedUrl ? (
+                    <iframe
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="h-full w-full"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      src={testimonial.embedUrl}
+                      title={testimonial.title}
+                    />
+                  ) : (
+                    <div className="flex h-full flex-col items-center justify-center bg-slate-100 px-4 text-center text-slate-500">
+                      <Video className="mb-3 h-10 w-10 text-amber-500" />
+                      <p className="text-sm font-black">Video coming soon</p>
+                    </div>
+                  )}
+                </div>
+                <div className="flex flex-1 flex-col p-2 pt-5">
+                  <h3 className="text-lg font-black leading-7 text-slate-950">
+                    {testimonial.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-6 text-slate-700">
+                    {testimonial.description}
+                  </p>
+                  <div className="mt-5 flex gap-0.5 border-t border-slate-100 pt-4">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star
+                        className="h-4 w-4 fill-amber-400 text-amber-400"
+                        key={index}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
